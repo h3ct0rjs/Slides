@@ -1,0 +1,325 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Centos - Security</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h2 class="fragment grow">Layered Security in CentOS 7</h2>
+					<h4>Operative Systems Class, Universidad Tecnologica de Pereira</h4>
+					<h5>2018 - 1</h5>
+					<p>
+						<small>Created by <a href="http://hectorfjimenez.co">Hector F. Jimenez S.</a> and <a href="http://hectorfjimenez.co">Cristian Ramirez</a> </small>
+					</p>
+				</section>
+
+				<section  style="text-align: left;">
+					<h2 >Content</h2>
+					<ol>
+						<li class="fragment fade-up">Security Context</li>
+						<li class="fragment fade-up">Layered Security</li>
+						<li class="fragment fade-up">CentOS Background</li>
+						<li class="fragment fade-up">CentOS Security Review</li>
+						<li class="fragment fade-up">Security Models</li>
+					</ol>
+				</section>
+	
+				<!-- Defense -->
+				<section>
+					<section data-background-video="/videos/kk.mp4" data-background-color="#000000">
+                	</section>
+					<section>
+					<h2 >What is security?</h2>
+					<img src="https://tstotopix.files.wordpress.com/2014/01/tapped_out_question_mark.png" alt="">
+					</section>
+		
+					<section>
+						<h3>Defense in depth and Layered Security</h3>
+						<img src="http://blog.smartbear.com/wp-content/uploads/imports/two-wall-defense1-570x301.jpg" alt="">
+					</section>
+				
+					<section>
+						<h4>Now Defense in depth and Layered Security is</h4>
+						<img src="https://pbs.twimg.com/media/DTHgcw9X0AMIHOd.jpg" alt="">
+					</section>	
+
+					<section>
+						<h4>Security is not a product, is a process which try to reduce the surface attack</h4>
+					</section>	
+				</section>
+
+				<!-- Centos Info -->
+				<section>
+					<section> 
+						<blockquote>
+							<p>CentOS (Community ENTerprise Operating System)</p>
+						</blockquote>
+					</section>
+					
+					<section>
+						<h2 >Release Date</h2>
+						<h3>First release on May 14th 2004</h3>
+						<h3>Latest release on May 10th 2018</h3>
+					</section>
+
+					<section>
+						<h2 >Distributions Related</h2>
+						<h3>Based on Red Hat Linux Enterprise</h3>
+						<h3>CentOS sponsored by Red Hat from 2014</h3>
+						<img src="http://www.fujitsu.com/ma/Images/redhat-580x224_tcm68-32995.png"  alt="">
+					</section>
+
+
+					<section data-markdown>
+						<script type="text/template">
+							## Projects based on CentOS
+							- Elastix 
+							- Rocks v4.1 (Fuji) cluster based on  CentOS 4.2
+							- SME Server 
+							- Asterisk Home 
+							- Freepbx Distro.
+							- Trixbox.
+							- Openfiler.
+							- Boston University's Linux 4.5 Server Edition (Zodiac).
+							- NuOnce Networks CentOS ™ / Blue Quartz ™ CD.
+							- Blue Quartz..It’s control panel is based on CentOS
+						</script>
+					</section>
+
+
+					<section data-markdown>
+						<script type="text/template">
+							## System Hardening
+							> The purpose of system hardening is to eliminate as many security risks as possible. 
+						</script>
+					</section>
+
+					<section id="fragments">
+						<h2>System Hardening</h2>
+						<p class="fragment grow">Installing extra software or running extra services creates unnecessary vulnerabilities</p>
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+				</section>
+				
+				<!-- Centos Security Strategies -->
+				<section>
+				
+					<section>
+						<h2 >CentOS Security Model</h2>
+						<img src="https://guides.wp-bullet.com/wp-content/uploads/2017/01/centos-automatic-security-updates.png" alt="">
+						  <small id="fn1"><a href="#r1">[1]</a> All the info <a href="https://wiki.centos.org/HowTos/OS_Protection">here</a></small>
+					</section>
+					<section>
+						<h2 >CentOS Security Model</h2>
+						<img src="https://knowstuffs.files.wordpress.com/2012/06/figure2.jpg" height="300" width="500" alt="">
+					</section>
+
+					<section>
+						<h3>There're so many posibilities to ensure your System</h3>
+						<p class="fragment grow">Data Encryption</p>
+						<p class="fragment grow">Data Security</p>
+						<p class="fragment grow">FileSystem Security</p>
+						<p class="fragment grow">Memory Protection</p>
+						<p class="fragment grow">Service Protection</p>
+					</section>
+
+					<section>
+						<h2> CentOS Security Model</h2>
+						<img src="https://qph.fs.quoracdn.net/main-qimg-6f8db847aa763cbf511c9c271da8aa48"  height="500" width="800" 	alt="">
+					</section>
+
+					<section>
+						<h2 >CentOS Phisycal Layer</h2>
+						<img src="https://blog.datapod.com.au/hs-fs/hub/284850/file-274839496-jpg/images/img_0124.jpg?t=1505355718465" height="500" width="800" alt="">
+					</section>
+					<section>
+						<h2 >CentOS Phisycal Layer</h2>
+						<ul>
+							<li class="fragment grow">BIOS protection</li>
+							<li class="fragment grow">Disable USB's or created a WhiteList</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2 >FileSystem</h2>
+						<img src="https://thumbs.dreamstime.com/b/chaos-to-order-7184217.jpg" >
+					</section>
+
+					<section>
+						<h3 >Partitioning</h3>
+						Partitioning is a key part of implementing security at the file system level.
+						<ol>
+							<li class="fragment">It limits the impact of disk failure</li>
+							<li class="fragment">It simplifies the process of creating backups</li>
+							<li class="fragment">It allows administrators to add restrictions such as quotas and read-only permissions more effectively</li>
+						</ol>
+					</section>
+
+					<section data-background="#000000">
+						<pre><code data-trim >
+							/dev/VG_OS/lv_root          /        ext3      defaults     1 1
+							/dev/VG_OS/lv_tmp           /tmp     ext3      defaults,nosuid,noexec,nodev  1 2
+							/dev/VG_OS/lv_vartmp        /var/tmp ext3      defaults,nosuid,noexec,nodev 1 2
+							/dev/data_vol/lv_home       /home    ext3      defaults,nosuid,nodev  1 2
+							/dev/VG_OS/lv_var           /var     ext3      defaults,nosuid     1 2
+							/dev/data_vol/lv_web        /var/www ext3      defaults,nosuid,nodev  1 2
+							/dev/sda1                   /boot    ext3      defaults,nosuid,noexec,nodev  1 2
+							tmpfs                       /dev/shm tmpfs     defaults 0 0
+							devpts                      /dev/pts devpts    gid=5,mode=620 0 0
+							sysfs                       /sys     sysfs     defaults    0 0
+							proc                        /proc    proc      defaults    0 0
+							/dev/_VG_OS/lv_swap         swap     swap      defaults    0 0		
+						</code></pre>
+					</section>
+					
+					<section>
+						<h2>Protect your Bootloader </h2>
+						<img src="https://oxynets.files.wordpress.com/2011/11/ubuntu-11-04-nuovo-grub-2.png?w=900" >
+					</section>
+					<section>
+						<h2>Protect your Bootloader </h2>
+						<img src="https://www.tecmint.com/wp-content/uploads/2013/01/grub.png" >
+					</section>
+					<section>
+						<h2>Protect your Bootloader </h2>
+						<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/726443/images/4884031/filed.png" >
+					</section>
+					
+					<section>
+						<h2>User and Group Permissions</h2>
+						<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/726443/images/4884032/sec.png" >
+					</section>
+
+					<section>
+						<h2>Permissions</h2>
+						<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/726443/images/4884031/filed.png" >
+					</section>
+
+					<section>
+						<h2>Security Models</h2>
+						<img src="/img/xx.png" >
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h3>Security Models</h3>
+						<ul>
+							<li class="fragment fade-up">in Linux everything as a file
+							e.g. memory, device-drivers, named pipes, and other system resources
+							hence why filesystem security is so important
+							</li>
+							<li class="fragment fade-up">I/O to devices is via a “special” file, e.g. /dev/cdrom</li>
+							<li class="fragment fade-up">have other special files like named pipes,  a conduit between processes/programs</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h3>Security Models</h3>
+						<ol>
+							<li class="fragment">Mandatory Access Control</li>
+							<li class="fragment">Discretionary Access Control</li>
+							<li class="fragment">Rule-Based Access Control</li>
+							<li class="fragment">Role-Based Access Control</li>
+						</ol>
+					</section>
+					<section>
+						<h3>An Overview of Access Control</h3>
+
+						<p class="fragment "><i>The term Access Control actually refers to the<span class="highlight-red">control over access to system resources</span>  after a user's account credentials and identity have been authenticated and access to the system granted.</i></p>
+						<span class="fragment highlight-red ">control over access to system resources</span>
+						<p class="fragment fade-up"><i> For example, a particular user, or group of users, might only be permitted access to certain files after logging into a system, while simultaneously being denied access to all other resources</i></p>
+					</section>
+
+					<section>
+						<h3>Mandatory Access Control (MAC)</h3>
+
+						<p class="fragment fade-out"> Is the strictest of all levels of control. The design of MAC was defined, and is primarily used by the government.</p>
+						<p><blockquote> takes a hierarchical approach to controlling access to resources. Under a MAC enforced environment access to all resource objects (such as data files) is controlled by settings defined by the system administrator.</blockquote></p>
+					
+					</section>
+
+
+					<section>
+						<h3>Mandatory Access Control (MAC)</h3>
+						<p><blockquote> As such, all access to resource objects is strictly controlled by the operating system based on system administrator configured settings.</blockquote></p>
+					
+					</section>
+					
+					<section>
+						<h3>Mandatory Access Control (MAC)</h3>
+						<img src="https://image.slidesharecdn.com/abacandtheevolutionofaccesscontrol-140929022230-phpapp01/95/abac-and-the-evolution-of-access-control-14-638.jpg?cb=1411957971" alt="">
+					</section>
+
+					<section>
+						<h3>Discretionary Access Control (DAC)</h3>
+						<p> Discretionary Access Control (DAC) allows each user to control access to their own data. DAC is typically the default access control mechanism for most desktop operating systems</p>
+					</section>
+					
+					<section>
+						<h3>Discretionary Access Control (DAC)</h3>
+						<img src="http://slideplayer.com/slide/9110050/27/images/15/Discretionary+Access+Control+(DAC).jpg" alt="">
+					</section>
+
+					<section>
+						<h3>Rule-Based Access Control</h3>1
+						<p>Under Rules Based Access Control, access is allowed or denied to resource objects based on a set of rules defined by a system administrator. </p>
+					</section>
+
+					<section>
+						<h3>Rule-Based Access Control</h3>
+						<img src="https://image.slidesharecdn.com/sle2016-161104100114/95/rulebased-accesscontrol-evaluation-through-modeltransformation-8-638.jpg?cb=1478253756" alt="">
+						
+					</section>
+
+					<section>
+						<h3>Role Based Access Control</h3>
+						<p>Access under RBAC is based on a user's job function within the organization to which the computer system belongs.
+						Essentially, <span class="highligh-green">RBAC</span> assigns permissions to particular roles in an organization. Users are then assigned to that particular role</p>
+					</section>
+					<section>
+						<h3>Role-Based Access Control</h3>
+						<img src="https://www.idenhaus.com/wp-content/uploads/2017/05/rbac_idenhaus-identity-management-role-based-access.jpg" alt="">
+					</section>					
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
